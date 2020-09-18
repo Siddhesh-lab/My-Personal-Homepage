@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>About Me</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<style>
+
+body{
+	background-color:#100;
+}
+
+h1,h3,h4,p {
+	color:white;
+}
+
+h1 {
+	text-shadow: 10px 10px 15px grey;
+}
+
+h3 {
+	margin: 10px;
+	padding: 5px;
+}
+
+
+#oval {
+  border-radius: 15px;
+  background: #73AD21;
+  width: 150px;
+  height: 50px;  
+  color: white;
+  text-align: center;
+  font-family:serif;
+  font-size:25px;
+}
+#font{
+	font-family:serif; font-size:25px;
+}
+#textwrap{
+	float: left;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+
+nav {
+height: 21vh;
+background-color: white;
+}
+
+.navbar-nav {
+display: flex;
+list-style: none;
+width: 70%;
+height:100%;
+justify-content: space-around;
+align-items: center;
+margin-left: auto;
+}
+
+.navbar-nav li a{
+font-size: 25px;
+font-weight: bold;
+color: green;
+text-shadow: 4px 4px 3px lightgreen;
+}
+
+
+@media screen and (max-width: 768px){
+
+.line{
+	width: 25px;
+	height: 3px;
+	background-color: red;
+	margin: 5px;
+}
+
+nav {
+	position: relative;
+}
+
+.hamburger {
+position: absolute;
+cursor: pointer;
+right: 5%;
+top: 50%;
+transform: translate(-5%, -50%);
+z-index:2;
+}
+
+
+ .navbar-nav {
+postion: fixed;
+background : lightblue;
+height: 60vh;
+width: 100%;
+flex-direction: column;
+clip-path: circle(100px at 100% -25%);
+-webkit-clip-path: circle(100px at 100% -25%);
+transition: all 1s ease-out;
+}
+.navbar-nav.open {
+clip-path: circle(1000px at 100% -25%);
+-webkit-clip-path: circle(1000px at 100% -25%);
+}
+
+}
+
+@media screen and (max-width: 768px){
+
+.img-fluid {
+width: 70%;
+height: 70%;
+margin-left: 25px;
+}
+
+}
+
+
+@media screen and (max-width: 768px){
+
+div.n {
+  border-radius: 50px;
+  background-color: lightgrey;
+  width: 300px;
+  padding: 25px;
+}
+
+}
+
+.textwrap1 {
+	float: left;
+	margin-left: 50px;
+	margin-right:100px; 
+}
+
+.textwrap2 {
+	float: right;
+	margin-left:100px;
+	margin-right:50px; 
+}
+
+
+img.one {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.oval1 {
+  border-radius: 50px;
+  background: #73AD21;
+  width: 55%;
+  height: auto;  
+  color: white;
+  font-family:serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.oval2 {
+  border-radius: 50px;
+  background: #73AD21;
+  width: 55%;
+  height: auto;  
+  color: white;
+  font-family:serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.oval3 {
+  border-radius: 50px;
+  background: #73AD21;
+  width: 45%;
+  height: auto;  
+  color: white;
+  font-family:serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.oval4 {
+  border-radius: 50px;
+  background: #73AD21;
+  width: 85%;
+  height: auto;  
+  color: white;
+  font-family:serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+#Transition {
+padding: 10px;
+animation-name: example;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: black;}
+}
+
+.carousel-inner img {
+    width: 80%;
+    height: 40%;
+  }
+
+div.n {
+  border-radius: 50px;
+  background-color: lightgrey;
+  width: 65%;
+  padding: 50px;
+  margin: auto;
+}
+
+.footer {
+bottom: 0;
+left: 0;
+widht: 100%;
+text-align: center;
+}
+
+.brand {
+width: 300px;
+}
+
+@media screen and (max-width: 768px){
+.brand{
+width: 60%;
+height:auto;
+}
+}
+
+
+</style>
+</head>
+<body>
+
+
+<h2 style="text-align:center; color:blue;">Welcome to my home page</h2>
+
+
+<nav class="navbar navbar-expand-sm bg-white navbar-white>
+  <!-- Brand/logo -->
+ <a class="navbar-brand" href="#" target="_blank">
+    <img src="web1.png" class="brand" alt="logo">
+  </a> 
+  
+	<div class="hamburger">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#aboutme">AboutMe</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#skills">Skills</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#gallery">Gallery</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact">Contact</a>
+    </li>
+  </ul>
+
+</nav>
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".navbar-nav");
+const links = document.querySelectorAll(".navbar-nav li");
+
+hamburger.addEventListener("click", () => {
+navLinks.classList.toggle("open");
+
+});
+</script>
+<hr>
+
+
+<img src="sid.jfif" class="img-fluid" id="textwrap" width="375" height="400">
+
+<br>
+
+	<h1 id="home" style="font-family:verdana; font-size: 80px;">Siddhesh Metkar</h1>
+
+<br>
+<br>
+<br>
+
+	<h4> ~ Fourth year UG student at<br> &nbsp &nbspBioSciences and Bioengineering Dept.,<br> &nbsp &nbspIIT Guwahati
+
+<br>
+<br>
+<br>
+<br>
+
+	This is my homepage where I've described about myself,<br> my skills, some projects that I've done.
+	<br>Also you can find my contact details here. 
+</h4> 
+
+<hr>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+<div class="row">
+<div class="column">
+	<h3 style="color:red; font-family: Montserrat; font-size: 50px; font-weight: 700;  text-decoration-line: underline;
+  		text-decoration-style: dotted;" id="aboutme">Hobbies</h3>
+		<p>
+		<ul style="color:white; font-size: 18px;">
+			<li>Being an Biotech engineer I'm a tech enthusiast.<br> So whenever I am free I utilize my time to explore tech related stuff.</li>
+			<li>In sports I'm a Rohit Sharma fan, and thus I love to watchand play cricket.<br> Also Squash is yet another sport of my interest which I had taken as NSO<br> in the First year.</li>
+			<li>Also I have a keen interest in listening songs.</li>
+		</ul>
+		</p>
+</div>
+<div class="column">
+		
+	<h3 style="color:red; font-family: Montserrat; font-size: 50px; font-weight: 700;  text-decoration-line: underline;
+  		text-decoration-style: dotted;">Ambitions</h3>
+		<p>
+		<ul style="color:white; font-size: 18px;">
+			<li>A famous quote is that <b><i>"Great ambition is the passion of a great character."</i></b></li>
+			<li>Working as an electrical engineer can allow me to make life easier for others and allow me to impact society in a positive way.<br></li>
+			<li>Also I participated in <b>ITSP</b> where me and my team had made a device and an app that provides information of any victim who
+				has met with an accident, and thus provide medical help to the victim as soon as possible.<br></li>
+			<li>Thus my ambitions in life are to make other's life more easy and become a role model for the society.</li>
+		</p> 
+</div>
+<div class="column">
+	<h3 class="heading" style="color:red; font-family: Montserrat; font-size: 50px; font-weight: 700; text-decoration-line: underline;
+  		text-decoration-style: dotted;">Other Interests</h3>
+	<p class="info" style="font-size: 18px;">
+	Also I have started a YouTube channel with Two of my wingies. The link of the channel is given below.<br>
+		<a href="https://www.youtube.com/channel/UCZkNflm8KwOa-CJWXowRnOg">My YouTube Channel</a>
+	<br>
+	In this channel We've described about the life of IIT-B. Although there is only one video,<br> but in the future we are going to add some<br> 
+		fascinating videos about the life in the insti.<br> So if you like the video please like, share and subscribe
+</p>
+</div>
+</div>
+</div>
+<hr>
+
+<h2 style="color: white; margin-left: 50px; font-family: Montserrat; font-size: 50px;" id="skills"><img src="tech.jfif" width="50px" height="50px">&nbsp&nbsp Technical Skills</h2>
+
+	<ul style="color:white; font-size: 18px; margin-top:10px; margin-left:50px;">
+		<li class="oval1"><b>Web Development :</b> HTML, CSS, Bootstrap, Js</li><br>
+		<li class="oval2"><b>Programming Languages :</b> C++, Python, LaTeX</li><br>
+		<li class="oval3"><b>App Development :</b> Android studio</li><br>
+		<li class="oval4"><b>Softwares :</b> AutoCAD, SolidWorks, Arduino, Android studio, Adobe Premeire Pro, Matlab</li><br>
+	</ul>
+
+	
+
+<h2 style="color: white; margin-left: 50px; font-family: Montserrat; font-size: 50px;" id="skills"><img src="ec.jfif" width="50px" height="50px">&nbsp&nbsp Extra-curriculars</h2>
+	<ul style="color:white; font-size: 22px; margin-top:10px; margin-left:50px; margin-right: 50px; padding:30px;" id="Transition">
+		<li>Completed one year long course of National Sports Organisation in Cricket, 2019-2020</li>
+		<li>Participated in various competitions like XLR8, RC Plane and Line Follower conducted by the Institute Technical Council.</li>
+		<li>Currently doing the web-development & LaTeX courses of Online Learner's Space.</li>
+		<li>Received Gold medal at School level in 3rd,8th and 9th SOF-International Mathematics Olympiad
+		and 18th SOF-National Science Olympiad and Silver medal at School level in 7th SOF-International
+		Mathematics Olympiad.</li>
+	</ul>
+<hr>
+
+
+<h2 style="text-align: center; font-family: verdana; font-size:45px; color: white; text-shadow: 5px 5px 7px red" id="gallery">Photo Gallery</h2>
+
+<hr>
+
+<div id="myCarousel" class="carousel slide">
+
+  <ul class="carousel-indicators">
+    <li class="item1 active"></li>
+    <li class="item2"></li>
+    <li class="item3"></li>
+  </ul>
+  
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="one" src="img1.jpg" alt="IIT Guwahati" width="900" height="500">
+	<div class="carousel-caption"><h1>IIT Guwahati</h1>
+	<p>Serpentine Lake</p></div>
+    </div>
+    <div class="carousel-item">
+      <img class="one" src="img2.jpg"  width="1100" height="500">
+	<div class="carousel-caption"><h2 class="bg-info">Mood Indigo</h1>
+	<p class="bg-success">Asia's Largest Cultural Fest</p></div>
+    </div>
+    <div class="carousel-item">
+      <img class="one" src="img3.jpg"  width="1100" height="500">
+	<div class="carousel-caption"><h2 class="bg-danger">Campus of IIT-G</h2>
+    </div>
+  </div>
+  
+  <a class="carousel-control-prev" href="#myCarousel">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#myCarousel">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+
+<script>
+$(document).ready(function(){
+  // Activate Carousel
+  $("#myCarousel").carousel({interval:2000});
+    
+  // Enable Carousel Indicators
+  $(".item1").click(function(){
+    $("#myCarousel").carousel(0);
+  });
+  $(".item2").click(function(){
+    $("#myCarousel").carousel(1);
+  });
+  $(".item3").click(function(){
+    $("#myCarousel").carousel(2);
+  });
+    
+  // Enable Carousel Controls
+  $(".carousel-control-prev").click(function(){
+    $("#myCarousel").carousel("prev");
+  });
+  $(".carousel-control-next").click(function(){
+    $("#myCarousel").carousel("next");
+  });
+  
+});
+</script>
+<hr>
+
+<p style="text-align: center; color:gray; margin-top: 10px" id="contact">I'm available</p>
+<h2 style="text-align: center; color:blue; font-weight: bold; margin-top: -20px">Contact Me</h2>
+
+
+	<form
+ 	 action="https://formspree.io/mgenraeo"
+  	 method="POST"
+        >
+
+<div class="n">
+	  <label style="font-family: Montserrat; font-weight:800; font-size: 15px; margin:auto;">
+   		Your Name:
+   		 <input type="text" name="name" style="width:80%" >
+
+<hr>	 </label>
+<br>
+	 <label style="font-family: Montserrat; font-weight:800; font-size: 15px; margin:auto;">
+		Your email:
+   		 <input type="text" name="_replyto"style="width:80%"  >
+	  </label>
+<hr>
+ 	 <label style="font-family: Montserrat; font-weight:800; font-size: 15px; margin:auto;">
+   		 Your message:<br>
+  		  <textarea name="message" style="width:auto; height:100px;"></textarea>
+ 	 </label>
+
+<hr>
+  <button type="submit" style="width: 150px; text-align: center; border-radius: 10px; background-color:green; font-weight: bold">Send</button>
+	</form>
+</div>
+	
+
+<br>
+<br>
+<br>
+<br>
+
+<div style="background-color: white;">
+<img src="web1.png"  style="width:350px; height:150px;" class="one">
+</div>
+
+<div class="footer">
+<p>Copyright 2020 All Rights Reserved</p>
+</div>
+
+</body>
+</html>
